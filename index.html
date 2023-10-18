@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    	// Prompt the user to enter a city name
+var cityName = prompt("Please enter a city name:");
+
+// Check if the entered city name is "Karachi" and display the appropriate message
+if (cityName.toLowerCase() === "karachi") {
+    alert("Welcome to the city of lights");
+} else {
+    alert("Welcome to " + cityName);
+}
+
+// Prompt the user to enter their gender
+var gender = prompt("Please enter your gender (Male or Female):");
+
+// Convert the input to lowercase to handle different casings
+gender = gender.toLowerCase();
+
+// Check the gender and display the appropriate message
+if (gender === "male") {
+    alert("Good Morning Sir.");
+} else if (gender === "female") {
+    alert("Good Morning Ma'am.");
+} else {
+    alert("Good Morning!");
+}
+
+
+// Prompt the user to enter the color of the traffic signal
+var signalColor = prompt("Please enter the color of the traffic signal (Red, Yellow, or Green):");
+
+// Convert the input to lowercase to handle different casings
+signalColor = signalColor.toLowerCase();
+
+// Check the signal color and display the appropriate message
+if (signalColor === "red") {
+    alert("Must Stop");
+} else if (signalColor === "yellow") {
+    alert("Ready to move");
+} else if (signalColor === "green") {
+    alert("Move now");
+} else {
+    alert("Invalid signal color. Please enter Red, Yellow, or Green.");
+}
+
+// Prompt the user to enter the remaining fuel in the car
+var remainingFuel = parseFloat(prompt("Please enter the remaining fuel in your car (in liters):"));
+
+// Check if the remaining fuel is less than 0.25 liters and display the appropriate message
+if (remainingFuel < 0.25) {
+    alert("Please refill the fuel in your car.");
+} else {
+    alert("You have enough fuel to continue your journey.");
+}
+
+// Function to calculate grade and remarks
+  function calculateGradeAndRemarks() {
+    // Get input values
+    var totalMarks = parseInt(prompt("Enter total marks:"));
+    var subject1Marks = parseInt(prompt("Enter marks obtained in subject 1:"));
+    var subject2Marks = parseInt(prompt("Enter marks obtained in subject 2:"));
+    var subject3Marks = parseInt(prompt("Enter marks obtained in subject 3:"));
+
+    // Calculate percentage
+    var obtainedMarks = subject1Marks + subject2Marks + subject3Marks;
+    var percentage = (obtainedMarks / totalMarks) * 100;
+
+    // Initialize grade and remarks
+    var grade = "";
+    var remarks = "";
+
+    // Determine grade and remarks
+    if (percentage >= 80) {
+      grade = "A-one Grade";
+      remarks = "Excellent";
+    } else if (percentage >= 70) {
+      grade = "A Grade";
+      remarks = "Good";
+    } else if (percentage >= 60) {
+      grade = "B Grade";
+      remarks = "You need to improve";
+    } else {
+      grade = "Fail";
+      remarks = "Sorry";
+    }
+
+    // Display the results on the page
+    document.write("<h1> Mark Sheet</h1>");
+    document.write("Total Marks: " + totalMarks + "<br>");
+    document.write("Marks Obtained: " + obtainedMarks + "<br>");
+    document.write("Percentage: " + percentage + "%<br>");
+    document.write("Grade: " + grade + "<br>");
+    document.write("Remarks: " + remarks + "<br>");
+  }
+
+  // Call the function to start the process
+  calculateGradeAndRemarks();
+  
+  // Generate a random secret number between 1 and 10
+  var secretNumber = Math.floor(Math.random() * 10) + 1;
+
+  // Prompt the user to guess the number
+  var userGuess = parseInt(prompt("Guess the secret number (between 1 and 10):"));
+
+  // Check if the user's guess is correct
+  if (userGuess === secretNumber) {
+  	document.write("<h1> Guess Game</h1>")
+    document.write("Bingo! Correct answer.");
+  } else if (userGuess === secretNumber + 1 || userGuess === secretNumber - 1) {
+    document.write("<h1> Guess Game</h1>")
+document.write("Close enough to the correct answer.");
+  } else {
+  	document.write("<h1> Guess Game</h1>")
+    document.write("Sorry, your guess is incorrect. The correct answer was " + secretNumber + ".");
+  }
+  
+  
+  // Prompt the user to enter a number
+  var number = parseInt(prompt("Enter a number:"));
+
+  // Check if the number is divisible by 3
+  if (number % 3 === 0) {
+  	document.write("<h1> Divisibility Checker</h1>")
+    document.write(number + " is divisible by 3.");
+  } else {
+  	document.write("<h1> Divisibility Checker</h1>")
+    document.write(number + " is not divisible by 3.");
+  } 
+  
+  
+
+  // Prompt the user to enter a number
+  var number = parseInt(prompt("Enter a number:"));
+
+  // Check if the number is even or odd
+  if (number % 2 === 0) {
+  document.write("<h1>Even or Odd Number Check</h1>")
+  document.write(number + " is an even number.");
+  } else {
+document.write("<h1>Even or Odd Number Check</h1>")
+    document.write(number + " is an odd number.");
+  }
+  
+  
+  // Prompt the user to enter the temperature
+  var temperature = parseInt(prompt("Enter the temperature:"));
+
+  // Determine the message based on the temperature
+  if (temperature > 40) {
+  	document.write("<h1>Temperature Message</h1>")
+    document.write("It is too hot outside.");
+  } else if (temperature > 30) {
+  	document.write("<h1>Temperature Message</h1>")
+    document.write("The weather today is Normal.");
+  } else if (temperature > 20) {
+  	document.write("<h1>Temperature Message</h1>")
+    document.write("Today's weather is cool.");
+  } else if (temperature > 10) {
+  	document.write("<h1>Temperature Message</h1>")
+    document.write("OMG! Today's weather is so Cool.");
+  } else {
+  	document.write("<h1>Temperature Message</h1>")
+    document.write("It's very cold outside.");
+  }
+  
+  
+document.write("<h1> Calculator </h1>");
+  // Prompt the user to enter the first number
+  var firstNumber = parseFloat(prompt("Enter the first number:"));
+
+  // Prompt the user to enter the second number
+  var secondNumber = parseFloat(prompt("Enter the second number:"));
+
+  // Prompt the user to enter the operation (+, -, *, /, %)
+  var operation = prompt("Enter the operation (+, -, *, /, %):");
+
+  // Initialize a variable to store the result
+  var result;
+
+  // Use if statements to perform the calculation based on the chosen operation
+  if (operation === "+") {
+    result = firstNumber + secondNumber;
+  } else if (operation === "-") {
+    result = firstNumber - secondNumber;
+  } else if (operation === "*") {
+    result = firstNumber * secondNumber;
+  } else if (operation === "/") {
+    if (secondNumber === 0) {
+      result = "Division by zero is not allowed.";
+    } else {
+      result = firstNumber / secondNumber;
+    }
+  } else if (operation === "%") {
+    result = firstNumber % secondNumber;
+  } else {
+    result = "Invalid operation.";
+  }
+
+  // Display the result to the user
+  document.write("Result: " + result);
+    	    </script>
+</body>
+</html>
